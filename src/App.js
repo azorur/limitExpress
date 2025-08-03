@@ -6,6 +6,7 @@ function App() {
       <header className="App-header">
         <h1>극한퀵서비스</h1>
         <p>현재 홈페이지 리뉴얼 중입니다.</p>
+        <h3>대표번호 1844-1025</h3>
         <img
           src="/MyPhoto_1066773013_0237.jpg"
           className="Main-image"
