@@ -101,17 +101,26 @@ export default function PosterResponsive() {
       </section>
 
       {/* =================== 미드 CTA =================== */}
-      <section className={`${center} container`} style={{ padding:"16px 24px 0" }}>
-        <div className={`p-4 w-100 ${center}`} style={{ ...card, background:"#eaf2ff", borderColor:"#cfe0ff" }}>
-          <p className="mb-1" style={h(24)}>상담만 해도 배차가 빨라집니다.</p>
-          <div 
-            className="border bg-white px-4 py-2 rounded-pill fw-black glow"
-            style={{ borderColor:"#cfe0ff", fontSize: 24 }}
-          >
-            {phone}
-          </div>
+    <section className={`${center} container`} style={{ padding:"16px 24px 0" }}>
+    <div className={`p-4 w-100 ${center}`} style={{ ...card, background:"#eaf2ff", borderColor:"#cfe0ff" }}>
+        <p className="mb-1" style={h(24)}>상담만 해도 배차가 빨라집니다.</p>
+        
+        <div
+        className="border bg-white px-4 py-2 rounded-pill fw-black glow"
+        style={{ borderColor:"#cfe0ff", fontSize: 24, fontWeight: 800, color:"#1d4ed8", cursor:"pointer" }}
+        onClick={() => {
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            if (isMobile) {
+            window.location.href = `tel:${phone}`;
+            } else {
+            alert("전화 연결은 모바일 기기에서만 가능합니다.");
+            }
+        }}
+        >
+        {phone}
         </div>
-      </section>
+    </div>
+    </section>
 
       {/* =================== 선택 이유 =================== */}
       <section className={`${center} container`} style={{ padding:"28px 24px 0" }}>
